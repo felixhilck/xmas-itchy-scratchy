@@ -112,12 +112,17 @@ $(document).ready(function(){
 		$Lolypop1 = $('#Lolypop1'),
 		$Lolypop2 = $('#Lolypop2'),
 		$socialLinkP = $('.socialLinkP'),
-		$banner = $('#carbonads-container');
+		$banner = $('#carbonads-container'),
+		$cardBackground = $('.card-background');
 
 	/* Scale background and animate line */
 	function getMainTimeline(){
 		
 		/* CLEAR stage */
+
+		$tlCardBackground = new TimelineMax();
+		$tlCardBackground.to($cardBackground, .75, {opacity:1});
+
 		tlClear = new TimelineLite();
 		tlClear.set([$windowRight, $banner, $windowLeft, $Tree, $star, $StarLight, $ShadowTree,$MouseInTree, $BaublesStriped, $BaublesFlat, $BaublesString, $BaublesStringString, $MouseRight, $MouseLeft], {autoAlpha: 0})
 		.set($MouseLeft, {xPercent: 150, yPercent: 36})
