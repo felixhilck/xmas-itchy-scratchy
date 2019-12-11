@@ -376,7 +376,8 @@ $(document).ready(function(){
 		.to($PresentBoxTop, 0.4, {rotation: -90, transformOrigin:"left center", ease:Power4.easeInOut}, "0")
 		.to($PresentBoxTop, 0.3, {yPercent: 400, transformOrigin:"left center", ease:Bounce.easeOut}, "0.4")
 		.to($PresentBoxTop, 0.4, {rotation: -180, transformOrigin:"left center", ease:Power4.easeIn}, "0.7")
-		.to($socialLinkP, 0.6, {scale: 1.4, yPercent: -130, transformOrigin:"top center", ease:Power4.easeInOut}, "-=0.4");
+		.to($socialLinkP, 3.6, {scale: 1.4, yPercent: -130, ease:Power4.easeInOut}, "-=0.4")
+		.to($socialLinkP, 1, {scale: .20, yPercent: 5, xPercent: -11,  ease:Power4.easeInOut}, "-=0.4");
 
 		tlOpenPresent.play();
 
